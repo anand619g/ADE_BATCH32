@@ -1,5 +1,13 @@
 {
 	"name": "DF-Batch32",
+	"properties": {
+		"globalParameters": {
+			"Global1": {
+				"type": "string",
+				"value": "Test"
+			}
+		}
+	},
 	"location": "centralindia",
 	"identity": {
 		"type": "SystemAssigned",
