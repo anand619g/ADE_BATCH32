@@ -1,0 +1,31 @@
+{
+	"name": "Run_other_df",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://management.azure.com/subscriptions/c4efc4cb-93a5-44a7-ac9c-c791a000d71f/resourceGroups/sqt/providers/Microsoft.DataFactory/factories/DF-sqt/pipelines/REST_API/createRun?api-version=2018-06-01",
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://management.azure.com/"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-27T04:03:57Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
