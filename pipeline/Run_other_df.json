@@ -17,6 +17,10 @@
 				"typeProperties": {
 					"method": "POST",
 					"url": "https://management.azure.com/subscriptions/c4efc4cb-93a5-44a7-ac9c-c791a000d71f/resourceGroups/sqt/providers/Microsoft.DataFactory/factories/DF-sqt/pipelines/REST_API/createRun?api-version=2018-06-01",
+					"body": {
+						"value": "{@pipeline()}",
+						"type": "Expression"
+					},
 					"authentication": {
 						"type": "MSI",
 						"resource": "https://management.azure.com/"
