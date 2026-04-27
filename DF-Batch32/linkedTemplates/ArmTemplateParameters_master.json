@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DF-Batch32"
+		},
+		"LS_ADLS_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_password": {
+			"value": ""
+		},
+		"LS_SQL_PARAM_password": {
+			"value": ""
+		},
+		"LS_SQL_properties_typeProperties_server": {
+			"value": "srvr3batch32.database.windows.net"
+		},
+		"LS_SQL_properties_typeProperties_database": {
+			"value": "db2_batch32"
+		},
+		"LS_SQL_properties_typeProperties_userName": {
+			"value": "anand"
+		},
+		"LS_SQL_PARAM_properties_typeProperties_server": {
+			"value": "@{linkedService().server_Name}"
+		},
+		"LS_SQL_PARAM_properties_typeProperties_database": {
+			"value": "@{linkedService().db_Name}"
+		},
+		"LS_SQL_PARAM_properties_typeProperties_userName": {
+			"value": "anand"
+		},
+		"Eventbasedtrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/c4efc4cb-93a5-44a7-ac9c-c791a000d71f/resourceGroups/Batch32/providers/Microsoft.Storage/storageAccounts/adls2batch32"
+		},
+		"Tumbling2_properties_pipeline_parameters_WindowStartTime": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"Tumbling2_properties_pipeline_parameters_WindowEndTime": {
+			"value": "@trigger().outputs.windowEndTime"
+		},
+		"tumbling3_properties_pipeline_parameters_WindowStartTime": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"tumbling3_properties_pipeline_parameters_WindowEndTime": {
+			"value": "@trigger().outputs.windowEndTime"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
